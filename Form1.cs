@@ -56,7 +56,12 @@ namespace TicTacToe
 
         internal void clearBoard()
         {
-            throw new NotImplementedException();
+            TableLayoutControlCollection buttons = tableLayoutPanel1.Controls;
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                if (buttons[i] is Button)
+                    buttons[i].Text = "";
+            }
         }
 
         public void changeLabel()
@@ -109,7 +114,7 @@ namespace TicTacToe
         }
 
     public void clearbound()
-        {
+        { 
             TableLayoutControlCollection buttons = tableLayoutPanel1.Controls;
 
             for(int i=0; i < buttons.Count; i++)
